@@ -41,7 +41,6 @@ namespace EquazioniLibrary.Test
             bool risp = Equazioni.IsDetermined(a);
 
             Assert.AreEqual(Risp_aspettata, risp);
-
         }
 
     }
