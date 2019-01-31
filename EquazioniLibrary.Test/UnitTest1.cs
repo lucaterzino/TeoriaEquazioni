@@ -12,9 +12,37 @@ namespace EquazioniLibrary.Test
         {
             double a = 3;
             bool Risp_aspettata = true;
+
             bool risp = Equazioni.IsDetermined(a);
+
             Assert.AreEqual(Risp_aspettata, risp);
             
         }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            double a = -5;
+
+            bool Risp_aspettata = true;
+
+            bool risp = Equazioni.IsDetermined(a);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+
+        }
+
+        [TestMethod]
+        public void TestMethod3()
+        {
+            double a = 0;
+            bool Risp_aspettata = false;
+
+            bool risp = Equazioni.IsDetermined(a);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+
+        }
+
     }
 }
