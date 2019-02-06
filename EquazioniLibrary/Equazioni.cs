@@ -23,9 +23,17 @@ namespace EquazioniLibrary
             return risp;
         }
 
-        public static bool IsInconsisted(double a)
+        public static bool IsInconsisted(double a, double b)
         {
-            return false;
+            bool risp = true;
+            if (a== 0 && b == 0  )
+            {
+                risp = true;
+            }
+
+            risp = false;
+
+            return risp;
         }
 
     }

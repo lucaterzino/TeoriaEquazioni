@@ -46,10 +46,10 @@ namespace EquazioniLibrary.Test
         [TestMethod]
         public void TestInconsisted()
         {
-            double a = 0;
-            bool Risp_aspettata = false;
+            double a = 0, b = 0;
+            bool Risp_aspettata = true;
 
-            bool risp = Equazioni.IsInconsisted(a);
+            bool risp = Equazioni.IsInconsisted(a, b);
 
             Assert.AreEqual(Risp_aspettata, risp);
         }
