@@ -14,12 +14,18 @@ namespace EquazioniLibrary
 
             if (a==0)
             {
-                return false;
+                risp = false;
             }
             else
             {
-                return true;
+                risp = true;
             }
+            return risp;
+        }
+
+        public static bool IsInconsisted(double a)
+        {
+            return false;
         }
 
     }

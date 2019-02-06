@@ -8,7 +8,7 @@ namespace EquazioniLibrary.Test
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestIsDetermined1()
         {
             double a = 3;
             bool Risp_aspettata = true;
@@ -39,6 +39,17 @@ namespace EquazioniLibrary.Test
             bool Risp_aspettata = false;
 
             bool risp = Equazioni.IsDetermined(a);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+        }
+
+        [TestMethod]
+        public void TestInconsisted()
+        {
+            double a = 0;
+            bool Risp_aspettata = false;
+
+            bool risp = Equazioni.IsInconsisted(a);
 
             Assert.AreEqual(Risp_aspettata, risp);
         }
