@@ -20,7 +20,7 @@ namespace EquazioniLibrary.Test
         }
 
         [TestMethod]
-        public void TestMethod2()
+        public void TestIsDetermined2()
         {
             double a = -5;
 
@@ -33,7 +33,7 @@ namespace EquazioniLibrary.Test
         }
 
         [TestMethod]
-        public void TestMethod3()
+        public void TestIsDetermined3()
         {
             double a = 0;
             bool Risp_aspettata = false;
@@ -43,8 +43,10 @@ namespace EquazioniLibrary.Test
             Assert.AreEqual(Risp_aspettata, risp);
         }
 
+        //impossibile
+
         [TestMethod]
-        public void TestInconsisted()
+        public void TestInconsisted1()
         {
             double a = 0, b = 0;
             bool Risp_aspettata = true;
@@ -53,6 +55,105 @@ namespace EquazioniLibrary.Test
 
             Assert.AreEqual(Risp_aspettata, risp);
         }
+
+        [TestMethod]
+        public void TestInconsisted2()
+        {
+            double a = 3, b = 0;
+            bool Risp_aspettata = false;
+
+            bool risp = Equazioni.IsInconsisted(a, b);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+        }
+
+        [TestMethod]
+        public void TestInconsisted3()
+        {
+            double a = 0, b = 3;
+            bool Risp_aspettata = false;
+
+            bool risp = Equazioni.IsInconsisted(a, b);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+        }
+
+        [TestMethod]
+        public void TestInconsisted4()
+        {
+            double a = -3, b = 0;
+            bool Risp_aspettata = false;
+
+            bool risp = Equazioni.IsInconsisted(a, b);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+        }
+
+        [TestMethod]
+        public void TestInconsisted5()
+        {
+            double a = 0, b = -3;
+            bool Risp_aspettata = false;
+
+            bool risp = Equazioni.IsInconsisted(a, b);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+        }
+
+        [TestMethod]
+        public void TestInconsisted6()
+        {
+            double a = 3, b = 3;
+            bool Risp_aspettata = false;
+
+            bool risp = Equazioni.IsInconsisted(a, b);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+        }
+
+        [TestMethod]
+        public void TestInconsisted7()
+        {
+            double a = -3, b = -3;
+            bool Risp_aspettata = false;
+
+            bool risp = Equazioni.IsInconsisted(a, b);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+        }
+
+        [TestMethod]
+        public void TestInconsisted8()
+        {
+            double a = -3, b = 3;
+            bool Risp_aspettata = false;
+
+            bool risp = Equazioni.IsInconsisted(a, b);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+        }
+
+        [TestMethod]
+        public void TestInconsisted9()
+        {
+            double a = 3, b = -3;
+            bool Risp_aspettata = false;
+
+            bool risp = Equazioni.IsInconsisted(a, b);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+        }
+
+        [TestMethod]
+        public void TestIsDegree2_1()
+        {
+            double a = 0;
+            bool Risp_aspettata = false;
+
+            bool risp = Equazioni.IsDegree2(a);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+        }      
 
     }
 }

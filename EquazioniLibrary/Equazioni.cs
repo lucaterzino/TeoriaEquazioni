@@ -26,15 +26,37 @@ namespace EquazioniLibrary
         public static bool IsInconsisted(double a, double b)
         {
             bool risp = true;
-            if (a== 0 && b == 0  )
+            if (a == 0 && b == 0)
             {
                 risp = true;
             }
 
-            risp = false;
+            else
+            {
+                risp = false;
+            }         
 
             return risp;
         }
+
+        public static bool IsDegree2(double a)
+        {
+            bool risp = true;
+
+            if (a != 0)
+            {
+                risp = false;
+            }
+
+            else
+            {
+                risp = false;
+            }
+
+            return risp;
+        }
+
+
 
     }
 }
