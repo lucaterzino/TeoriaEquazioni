@@ -142,6 +142,7 @@ namespace EquazioniLibrary.Test
             bool risp = Equazioni.IsInconsisted(a, b);
 
             Assert.AreEqual(Risp_aspettata, risp);
+
         }
 
         [TestMethod]
