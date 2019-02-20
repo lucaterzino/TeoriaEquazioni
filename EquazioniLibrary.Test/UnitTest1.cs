@@ -154,7 +154,55 @@ namespace EquazioniLibrary.Test
             bool risp = Equazioni.IsDegree2(a);
 
             Assert.AreEqual(Risp_aspettata, risp);
-        }      
+        }
+
+        [TestMethod]
+        public void TestIsDegree2_2()
+        {
+            double a = 3;
+            bool Risp_aspettata = false;
+
+            bool risp = Equazioni.IsDegree2(a);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+        }
+
+        [TestMethod]
+        public void TestDelta()
+        {
+            double a = 0;
+
+            bool Risp_aspettata = false;
+
+            bool risp = Equazioni.IsDegree2(a);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+        }
+
+        [TestMethod]
+        public void TestDelta_1()
+        {
+            double a = 0;
+
+            bool Risp_aspettata = false;
+
+            bool risp = Equazioni.IsDegree2(a);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+        }
+
+        [TestMethod]
+        public void TestEquationDegree1()
+        {
+            double a = 0;
+            double b = 0;
+
+            string Risp_aspettata = "Indeterminato";
+
+            string risp = Equazioni.EquationDegree1(a, b);
+
+            Assert.AreEqual(Risp_aspettata, risp);
+        }
 
     }
 }

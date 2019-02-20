@@ -56,7 +56,33 @@ namespace EquazioniLibrary
             return risp;
         }
 
+        public static bool Delta(double a)
+        {
+            bool risp = false;
 
+            if (a != 0)
+            {
+                risp = true;
+            }
+
+            return risp;
+        }
+
+        public static double Delta_1(double a, double b, double c)
+        {
+            return b * b - 4 * a * c;
+        }
+
+        public static string EquationDegree1(double a, double b)
+        {
+            string risp ="";
+
+            if (a==0 && b==0)
+            {
+                risp = "Indeterminato";
+            }
+            return risp;
+        }
 
     }
 }
